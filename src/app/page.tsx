@@ -4,6 +4,8 @@ import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Experience from '@/components/sections/Experience'
 import Projects from '@/components/sections/Projects'
+import Skills from '@/components/sections/Skills'
+import Contact from '@/components/sections/Contact'
 import FadeInSection from '@/components/ui/FadeInSection'
 
 export default function Home() {
@@ -15,7 +17,8 @@ export default function Home() {
         <FadeInSection><About /></FadeInSection>
         <FadeInSection><Experience /></FadeInSection>
         <FadeInSection><Projects /></FadeInSection>
-        {/* Skills, Contact — added in next phase */}
+        <FadeInSection><Skills /></FadeInSection>
+        <FadeInSection><Contact /></FadeInSection>
       </main>
       <Footer />
     </>
