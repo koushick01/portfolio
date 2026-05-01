@@ -1,6 +1,7 @@
 'use client'
 
-import { motion, useReducedMotion, type Variants } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useReducedMotion, useInView, type Variants } from 'framer-motion'
 
 interface FadeInSectionProps {
   children: React.ReactNode
@@ -13,7 +14,9 @@ const variants: Variants = {
 }
 
 export default function FadeInSection({ children, className }: FadeInSectionProps) {
+  const ref = useRef<HTMLDivElement>(null)
   const prefersReducedMotion = useReducedMotion()
+  const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   if (prefersReducedMotion) {
     return <div className={className}>{children}</div>
@@ -21,10 +24,10 @@ export default function FadeInSection({ children, className }: FadeInSectionProp
 
   return (
     <motion.div
+      ref={ref}
       variants={variants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-80px' }}
+      animate={isInView ? 'visible' : 'hidden'}
       className={className}
     >
       {children}
