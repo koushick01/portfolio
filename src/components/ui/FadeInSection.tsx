@@ -1,15 +1,15 @@
 'use client'
 
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion, type Variants } from 'framer-motion'
 
 interface FadeInSectionProps {
   children: React.ReactNode
   className?: string
 }
 
-const variants = {
+const variants: Variants = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.0, 0.0, 0.2, 1.0] } },
 }
 
 export default function FadeInSection({ children, className }: FadeInSectionProps) {
