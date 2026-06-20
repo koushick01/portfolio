@@ -86,10 +86,11 @@ src/
     └── index.ts          # TypeScript interfaces: Project, SkillCategory, Experience, PersonalInfo
 
 public/
-├── resume.pdf            # Koushick's resume — served at /resume.pdf for download
+├── resume.pdf            # Koushick's resume — served at /resume.pdf; downloads as "Koushick Resume.pdf"
 └── favicon.ico           # Default Next.js favicon (replace with custom KP initials favicon)
 
 tailwind.config.ts        # Custom color tokens mapped to CSS variables, darkMode: 'class'
+vercel.json               # Sets Content-Disposition header for /resume.pdf so it downloads as "Koushick Resume.pdf"
 ```
 
 ---
@@ -104,7 +105,7 @@ tailwind.config.ts        # Custom color tokens mapped to CSS variables, darkMod
 | Projects (add/remove/edit) | `src/data/projects.ts` |
 | Skills (add/remove categories or skills) | `src/data/skills.ts` |
 | Work experience entries | `src/data/experience.ts` |
-| Resume PDF | Replace `public/resume.pdf` |
+| Resume PDF | Replace `public/resume.pdf` — download filename is enforced server-side in `vercel.json` (`Content-Disposition` header). If renaming, update both `vercel.json` and the `download` attr in `Hero.tsx`. |
 
 After editing data files, no component changes needed — sections read directly from the data arrays.
 
