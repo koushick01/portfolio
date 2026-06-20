@@ -28,7 +28,7 @@ export default function Hero() {
           </a>
           <a
             href={personal.resumeUrl}
-            download="Koushick-Padmanabhan-Resume.pdf"
+            download="Koushick Resume.pdf"
             className="border border-border-custom text-text-primary px-6 py-3 rounded-lg font-medium hover:border-accent hover:text-accent transition-colors duration-150 w-full sm:w-auto text-center"
           >
             Download Resume
