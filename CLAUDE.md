@@ -27,6 +27,8 @@ Single-page, fully static portfolio website. All content is hardcoded in TypeScr
 | lucide-react | ^0.400.0 | Icons — pinned to 0.400.x because v1.x removed brand icons (Github, Linkedin) |
 | clsx | ^2.1.1 | Conditional class names |
 | tailwind-merge | ^3.5.0 | Merges conflicting Tailwind classes |
+| @vercel/analytics | latest | Vercel Web Analytics — pageview/visitor tracking, view in Vercel dashboard |
+| @vercel/speed-insights | latest | Vercel Speed Insights — Core Web Vitals tracking, view in Vercel dashboard |
 
 > **Do not upgrade lucide-react past 0.x** — v1.x removed the `Github` and `Linkedin` brand icons used in `ProjectCard` and `Contact`.
 
@@ -49,7 +51,7 @@ npx tsc --noEmit   # TypeScript check without building
 ```
 src/
 ├── app/
-│   ├── layout.tsx        # Root layout: ThemeProvider, Inter font, SEO metadata
+│   ├── layout.tsx        # Root layout: ThemeProvider, Inter font, SEO metadata, Vercel Analytics + Speed Insights
 │   ├── page.tsx          # Renders all sections in order
 │   └── globals.css       # CSS variables for light/dark themes, smooth scroll, scrollbar
 │
@@ -223,6 +225,8 @@ git push origin main
 **To roll back:** Vercel dashboard → Deployments tab → find previous deployment → ⋯ → Promote to Production.
 
 **Resume PDF:** The file at `public/resume.pdf` is served at `/resume.pdf`. To update the resume, replace this file and push to main.
+
+**Analytics & Speed Insights:** `@vercel/analytics` and `@vercel/speed-insights` are installed and wired into `src/app/layout.tsx` via the `<Analytics />` and `<SpeedInsights />` components (rendered inside `<body>`, after `ThemeProvider`). These are zero-config — no environment variables or API keys needed. Data only appears in the Vercel dashboard for **production deployments** (i.e. after a push to `main` is deployed), not in local dev. View it at: Vercel dashboard → project → **Analytics** tab (pageviews/visitors) and **Speed Insights** tab (Core Web Vitals). No component-level changes are needed to add new tracked pages — both are global and instrument every route automatically.
 
 ---
 
