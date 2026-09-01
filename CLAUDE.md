@@ -111,6 +111,8 @@ vercel.json               # Sets Content-Disposition header for /resume.pdf so i
 
 After editing data files, no component changes needed — sections read directly from the data arrays.
 
+> **Current content (as of 2026-09-01):** The site reflects the "Software Developer" resume — 4+ years, Financial Services + Healthcare focus, Java/Spring Boot/Kafka. Experience entries: Goldman Sachs, Infosys, Zensar Technologies. Contact email: `koushickp2001@gmail.com`. When the resume changes, update `src/data/*`, the `metadata` export in `src/app/layout.tsx`, and replace `public/resume.pdf` so all three stay in sync.
+
 ---
 
 ## Design system
