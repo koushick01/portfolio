@@ -2,11 +2,11 @@ import { Experience } from '@/types'
 
 export const experiences: Experience[] = [
   {
-    id: 'academy-st-thrift',
-    company: 'Academy St. Thrift',
-    role: 'Full Stack Developer Intern',
-    startDate: 'Jan 2026',
-    endDate: 'May 2026',
+    id: 'goldman-sachs',
+    company: 'Goldman Sachs',
+    role: 'Software Developer',
+    startDate: 'Aug 2025',
+    endDate: 'Present',
   },
   {
     id: 'infosys',
@@ -16,10 +16,10 @@ export const experiences: Experience[] = [
     endDate: 'Aug 2024',
   },
   {
-    id: 'retech',
-    company: 'Retech Solutions Pvt. Ltd',
-    role: 'Junior Developer Intern',
-    startDate: 'Aug 2020',
-    endDate: 'Oct 2020',
+    id: 'zensar-technologies',
+    company: 'Zensar Technologies',
+    role: 'Software Engineer',
+    startDate: 'Jun 2021',
+    endDate: 'Jul 2022',
   },
 ]

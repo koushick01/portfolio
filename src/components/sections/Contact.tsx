@@ -9,7 +9,7 @@ export default function Contact() {
         <SectionHeader title="Let's Connect" />
 
         <p className="text-muted mt-4 max-w-md mx-auto leading-relaxed">
-          I&apos;m currently open to full-time Software Engineering opportunities. Feel free to reach out.
+          I&apos;m currently open to full-time Software Developer opportunities. Feel free to reach out.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-10">

@@ -12,23 +12,33 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Koushick Padmanabhan | Software Engineer',
+  title: 'Koushick Padmanabhan | Software Developer',
   description:
-    'Software Engineer specializing in full-stack development and AI-integrated applications. Based in New Jersey.',
-  keywords: ['Software Engineer', 'Full Stack Developer', 'Next.js', 'React', 'FastAPI', 'Python'],
+    'Software Developer with 4+ years of experience engineering scalable Financial Services and Healthcare systems with Java, Spring Boot, microservices, Apache Kafka, and applied Generative AI. Based in New Jersey.',
+  keywords: [
+    'Software Developer',
+    'Java',
+    'Spring Boot',
+    'Microservices',
+    'Apache Kafka',
+    'AWS',
+    'Kubernetes',
+    'Generative AI',
+    'RAG',
+  ],
   authors: [{ name: 'Koushick Padmanabhan' }],
   openGraph: {
-    title: 'Koushick Padmanabhan | Software Engineer',
+    title: 'Koushick Padmanabhan | Software Developer',
     description:
-      'Software Engineer specializing in full-stack development and AI-integrated applications.',
+      'Software Developer engineering scalable Financial Services and Healthcare systems with Java, Spring Boot, microservices, and applied Generative AI.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary',
-    title: 'Koushick Padmanabhan | Software Engineer',
+    title: 'Koushick Padmanabhan | Software Developer',
     description:
-      'Software Engineer specializing in full-stack development and AI-integrated applications.',
+      'Software Developer engineering scalable Financial Services and Healthcare systems with Java, Spring Boot, microservices, and applied Generative AI.',
   },
 }
 
